@@ -2,6 +2,7 @@ import Vue from 'vue'
 
 let myTunes = {}
 
+
 // THESE ARE SIMPLE HELPER FUNCTIONS TO KEEP YOUR MYTUNES IN LOCAL STORAGE
 // WE WILL EVENTUALLY BE REPLACING THESE GUYS BUT NOT TODAY :)
 // NOTICE HOWEVER THAT THESE FUNCTIONS ARE NOT GOING TO BE EXPORTED BECAUSE 
@@ -18,7 +19,9 @@ function loadMytunes() {
 loadMytunes()
 
 export default {
-  getTracks() { },
+  getTracks() {
+    return myTunes
+  },
   addTrack(track) {
     // OCCASIONALLY YOU WILL RUN INTO ISSUES WHERE VUE WILL BE
     // UNAWARE THAT A CHANGE HAS OCCURED TO YOUR DATA
@@ -27,8 +30,14 @@ export default {
     saveMytunes()
     // YOU CAN READ MORE ABOUT VUE.SET HERE
     // https://vuejs.org/v2/api/#Vue-set
-   },
-  removeTrack() { },
-  promoteTrack() { },
-  demoteTrack() { }
+  },
+  removeTrack(track) {    
+    saveMytunes()
+  },
+  promoteTrack(track) { 
+    saveMytunes()
+  },
+  demoteTrack(track) { 
+    saveMytunes()
+  }
 }
