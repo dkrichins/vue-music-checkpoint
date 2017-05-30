@@ -1,15 +1,28 @@
 <template>
   <div class="home">
-    <!-- YOU WILL PROBABLY END UP WITH SOMETHING LIKE THIS -->    
-    <itunes class="itunes"></itunes>
-    <my-tunes class="my-tunes"></my-tunes>
+    <div class="background">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="well">
+              <itunes class="itunes"></itunes>       
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="well">
+              <my-tunes class="my-tunes"></my-tunes>          
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div> 
   </div>
 </template>
 
 <script>
 
-import MyTunes from '@/components/Mytunes'
-import Itunes from '@/components/Itunes'
+import MyTunes from './Mytunes'
+import Itunes from './Itunes'
 
 export default {
   name: 'home',
@@ -19,7 +32,7 @@ export default {
     }
   },
   components: {
-    MyTunes
+    MyTunes,
     Itunes
   }
 }
@@ -32,18 +45,27 @@ export default {
 * BOOTSTRAP IS FOR THE WEAK FLEXBOX IS KING
 * -- McCall
 **/
-.my-tunes{
-  display: inline-block;
+/*.my-tunes{  
   min-height: 500px;
   min-width: 50%;
-  background: purple;
+  background: silver;
 }
 
-.itunes{
-  display: inline-block;
+.itunes{  
   background: pink;
   min-height: 500px;
   min-width: 45%;
+}
+*/
+.background{
+  background: url("http://goldwallpapers.com/uploads/posts/music-studio-wallpaper/music_studio_wallpaper_024.jpg") no-repeat center center fixed;
+  background-size: cover;
+ 
+}
+
+.well {
+  opacity: .8;
+  background: silver;
 }
 
 </style>

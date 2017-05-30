@@ -7,11 +7,15 @@
 <script>
 
 import Home from './components/Home'
+import Itunes from './components/Itunes'
+import Mytunes from './components/Mytunes'
 
 export default {
   name: 'app',
   components: {
-    Home   
+    Home,   
+    Itunes,
+    Mytunes
   },
 
 }
